@@ -8,4 +8,4 @@ db.sqlite3
 *.log
 .DS_Store
 Thumbs.db
-capturas/
+
