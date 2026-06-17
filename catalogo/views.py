@@ -5,11 +5,11 @@ from .models import Producto
 
 def home(request):
     context = {
-        'nombre': 'Ramos Mercado Vasco',
-        'carrera': 'Ingeniería de Software',
-        'semestre': '5to semestre',
+        'nombre': 'Ramos Mercado Vasco Qori',
+        'carrera': 'Ingeniería de Sistemas',
+        'semestre': 'IX Semestre',
         'descripcion': (
-            'Estudiante de Ingeniería de Software con interés en el desarrollo web '
+            'Estudiante de Ingeniería de Sistemas con interés en el desarrollo web '
             'fullstack, bases de datos y automatización de procesos. '
             'Actualmente aprendiendo Django, Python y tecnologías web modernas.'
         ),

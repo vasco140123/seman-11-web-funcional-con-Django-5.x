@@ -126,22 +126,22 @@
     <a href="{% url 'catalogo' %}" class="btn-proyectos">Ver mis proyectos →</a>
 </section>
 
-<div class="info-grid">
-    <div class="info-card">
-        <p class="label">Universidad</p>
-        <p class="value">UTEQ</p>
+    <div class="info-grid">
+        <div class="info-card">
+            <p class="label">Universidad</p>
+            <p class="value">UTEQ</p>
+        </div>
+        <div class="info-card">
+            <p class="label">Código</p>
+            <p class="value">2021200796I</p>
+        </div>
+        <div class="info-card">
+            <p class="label">GitHub</p>
+            <p class="value"><a href="{{ github }}" target="_blank" style="color:#7c6fcd;">vasco140123</a></p>
+        </div>
+        <div class="info-card">
+            <p class="label">Área de interés</p>
+            <p class="value">Desarrollo Web Fullstack</p>
+        </div>
     </div>
-    <div class="info-card">
-        <p class="label">Semestre</p>
-        <p class="value">{{ semestre }}</p>
-    </div>
-    <div class="info-card">
-        <p class="label">GitHub</p>
-        <p class="value"><a href="{{ github }}" target="_blank" style="color:#7c6fcd;">vasco140123</a></p>
-    </div>
-    <div class="info-card">
-        <p class="label">Área de interés</p>
-        <p class="value">Desarrollo Web Fullstack</p>
-    </div>
-</div>
 {% endblock %}
