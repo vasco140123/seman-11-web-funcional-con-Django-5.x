@@ -1,0 +1,147 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Vasco Ramos | Inicio{% endblock %}
+
+{% block extra_css %}
+<style>
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 5rem 1rem 3rem;
+        gap: 1.2rem;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #7c6fcd, #4a3f8f);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1rem;
+        color: #7c6fcd;
+        font-weight: 500;
+    }
+
+    .hero p {
+        max-width: 600px;
+        line-height: 1.8;
+        color: #b0b0c8;
+        font-size: 1rem;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .tag {
+        background-color: #1e1e38;
+        border: 1px solid #3a3a5c;
+        color: #a0a0c0;
+        padding: 0.35rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+    }
+
+    .btn-proyectos {
+        margin-top: 1rem;
+        display: inline-block;
+        background: linear-gradient(135deg, #7c6fcd, #4a3f8f);
+        color: white;
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: opacity 0.2s;
+    }
+
+    .btn-proyectos:hover {
+        opacity: 0.85;
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.2rem;
+        margin-top: 3rem;
+    }
+
+    .info-card {
+        background-color: #1a1a2e;
+        border: 1px solid #2a2a4a;
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .info-card .label {
+        font-size: 0.8rem;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.4rem;
+    }
+
+    .info-card .value {
+        font-size: 1rem;
+        color: #e0e0e0;
+        font-weight: 500;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="avatar">👨‍💻</div>
+    <h1>{{ nombre }}</h1>
+    <p class="subtitle">{{ carrera }} &mdash; {{ semestre }}</p>
+    <p>{{ descripcion }}</p>
+    <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Django</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Git</span>
+    </div>
+    <a href="{% url 'catalogo' %}" class="btn-proyectos">Ver mis proyectos →</a>
+</section>
+
+<div class="info-grid">
+    <div class="info-card">
+        <p class="label">Universidad</p>
+        <p class="value">UTEQ</p>
+    </div>
+    <div class="info-card">
+        <p class="label">Semestre</p>
+        <p class="value">{{ semestre }}</p>
+    </div>
+    <div class="info-card">
+        <p class="label">GitHub</p>
+        <p class="value"><a href="{{ github }}" target="_blank" style="color:#7c6fcd;">vasco140123</a></p>
+    </div>
+    <div class="info-card">
+        <p class="label">Área de interés</p>
+        <p class="value">Desarrollo Web Fullstack</p>
+    </div>
+</div>
+{% endblock %}
